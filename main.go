@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"snai.travel.blog/blog/internal/routers"
+	"snai.travel.blog/internal/routers"
 )
 
 func main() {

@@ -2,7 +2,7 @@ package routers
 
 import (
 	"github.com/gin-gonic/gin"
-	v1 "snai.travel.blog/2.2/internal/routers/api/v1"
+	v1 "snai.travel.blog/internal/routers/api/v1"
 )
 
 func NewRouter() *gin.Engine {
