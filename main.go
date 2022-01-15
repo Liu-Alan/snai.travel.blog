@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/gin-gonic/gin"
 	"snai.travel.blog/global"
 	"snai.travel.blog/internal/routers"
 	"snai.travel.blog/pkg/setting"
@@ -45,13 +46,14 @@ func setupSetting() error {
 }
 
 func main() {
+	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()
 	//router.Run()
 	s := &http.Server{
-		Addr:           ":8080",
+		Addr:           ":" + global.ServerSetting.HttpPort,
 		Handler:        router,
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
+		ReadTimeout:    global.ServerSetting.ReadTimeout,
+		WriteTimeout:   global.ServerSetting.WriteTimeout,
 		MaxHeaderBytes: 1 << 20,
 	}
 	s.ListenAndServe()
