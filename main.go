@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"time"
 
-	"snai.travel.blog/2.2/global"
-	"snai.travel.blog/2.2/pkg/setting"
+	"snai.travel.blog/global"
 	"snai.travel.blog/internal/routers"
+	"snai.travel.blog/pkg/setting"
 )
 
 func init() {
