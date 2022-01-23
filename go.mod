@@ -8,6 +8,12 @@ require (
 )
 
 require (
+	github.com/jinzhu/inflection v1.0.0 // indirect
+	google.golang.org/appengine v1.6.7 // indirect
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
+)
+
+require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.13.0 // indirect
