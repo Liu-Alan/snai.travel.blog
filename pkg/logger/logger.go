@@ -2,10 +2,12 @@ package logger
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"io"
 	"log"
 	"runtime"
+	"time"
 )
 
 type Level int8
@@ -92,7 +94,7 @@ func (l *Logger) WithCallerFrames() *Logger {
 	depth := runtime.Callers(minCallerDepth, pcs)
 	frames := runtime.CallersFrames(pcs[:depth])
 	for frame, more := frames.Next(); more; frame, more = frames.Next() {
-		callers = append(callers, fmt.Sprint("%s: %d %s", frame.File, frame.Line, frame.Function))
+		callers = append(callers, fmt.Sprintf("%s: %d %s", frame.File, frame.Line, frame.Function))
 		if !more {
 			break
 		}
@@ -101,4 +103,40 @@ func (l *Logger) WithCallerFrames() *Logger {
 	ll := l.clone()
 	ll.callers = callers
 	return ll
+}
+
+func (l *Logger) JSONFormat(level Level, message string) map[string]interface{} {
+	data := make(Fields, len(l.fields)+4)
+	data["level"] = level.String()
+	data["time"] = time.Now().Local().UnixNano()
+	data["message"] = message
+	data["callers"] = l.callers
+	if len(l.fields) > 0 {
+		for k, v := range l.fields {
+			if _, ok := data[k]; !ok {
+				data[k] = v
+			}
+		}
+	}
+
+	return data
+}
+
+func (l *Logger) Output(level Level, message string) {
+	body, _ := json.Marshal(l.JSONFormat(level, message))
+	content := string(body)
+	switch level {
+	case LevelDebug:
+		l.newLogger.Print(content)
+	case LevelInfo:
+		l.newLogger.Print(content)
+	case LevelWarn:
+		l.newLogger.Print(content)
+	case LevelError:
+		l.newLogger.Print(content)
+	case LevelFatal:
+		l.newLogger.Fatal(content)
+	case LevelPanic:
+		l.newLogger.Panic(content)
+	}
 }
