@@ -48,7 +48,7 @@ type Logger struct {
 	callers   []string
 }
 
-func newLogger(w io.Writer, prefix string, flag int) *Logger {
+func NewLogger(w io.Writer, prefix string, flag int) *Logger {
 	l := log.New(w, prefix, flag)
 	return &Logger{newLogger: l}
 }
@@ -139,4 +139,52 @@ func (l *Logger) Output(level Level, message string) {
 	case LevelPanic:
 		l.newLogger.Panic(content)
 	}
+}
+
+func (l *Logger) Debug(v ...interface{}) {
+	l.Output(LevelDebug, fmt.Sprint(v...))
+}
+
+func (l *Logger) Debugf(format string, v ...interface{}) {
+	l.Output(LevelDebug, fmt.Sprintf(format, v...))
+}
+
+func (l *Logger) Info(v ...interface{}) {
+	l.Output(LevelInfo, fmt.Sprint(v...))
+}
+
+func (l *Logger) Infof(format string, v ...interface{}) {
+	l.Output(LevelInfo, fmt.Sprintf(format, v...))
+}
+
+func (l *Logger) Warn(v ...interface{}) {
+	l.Output(LevelDebug, fmt.Sprint(v...))
+}
+
+func (l *Logger) Warnf(format string, v ...interface{}) {
+	l.Output(LevelDebug, fmt.Sprintf(format, v...))
+}
+
+func (l *Logger) Error(v ...interface{}) {
+	l.Output(LevelError, fmt.Sprint(v...))
+}
+
+func (l *Logger) Errorf(format string, v ...interface{}) {
+	l.Output(LevelError, fmt.Sprintf(format, v...))
+}
+
+func (l *Logger) Fatal(v ...interface{}) {
+	l.Output(LevelFatal, fmt.Sprint(v...))
+}
+
+func (l *Logger) Fatalf(format string, v ...interface{}) {
+	l.Output(LevelFatal, fmt.Sprintf(format, v...))
+}
+
+func (l *Logger) Panic(v ...interface{}) {
+	l.Output(LevelPanic, fmt.Sprint(v...))
+}
+
+func (l *Logger) Panicf(format string, v ...interface{}) {
+	l.Output(LevelPanic, fmt.Sprintf(format, v...))
 }

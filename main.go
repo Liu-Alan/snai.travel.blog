@@ -5,11 +5,13 @@ import (
 	"net/http"
 	"time"
 
-	"snai.travel.blog/internal/model"
-
 	"github.com/gin-gonic/gin"
+	"gopkg.in/natefinch/lumberjack.v2"
+
 	"snai.travel.blog/global"
+	"snai.travel.blog/internal/model"
 	"snai.travel.blog/internal/routers"
+	"snai.travel.blog/pkg/logger"
 	"snai.travel.blog/pkg/setting"
 )
 
@@ -17,6 +19,11 @@ func init() {
 	err := setupSetting()
 	if err != nil {
 		log.Fatalf("init.setupSetting err: %v", err)
+	}
+
+	err = setupLogger()
+	if err != nil {
+		log.Fatalf("init.setupLogger err:%v", err)
 	}
 
 	err = setupDBEngine()
@@ -49,6 +56,17 @@ func setupSetting() error {
 	return nil
 }
 
+func setupLogger() error {
+	global.Logger = logger.NewLogger(&lumberjack.Logger{
+		Filename:  global.AppSetting.LogSavePath + "/" + global.AppSetting.LogFileName + global.AppSetting.LogFileExt,
+		MaxSize:   600,
+		MaxAge:    10,
+		LocalTime: true,
+	}, "", log.LstdFlags).WithCaller(2)
+
+	return nil
+}
+
 func setupDBEngine() error {
 	var err error
 	global.DBEngine, err = model.NewDBEngine(global.DatabaseSetting)
@@ -60,6 +78,7 @@ func setupDBEngine() error {
 }
 
 func main() {
+	global.Logger.Infof("%s: go-programming-tour-book/%s", "eddycjy", "blog-service")
 	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()
 	//router.Run()

@@ -5,12 +5,13 @@ go 1.17
 require (
 	github.com/gin-gonic/gin v1.7.7
 	github.com/spf13/viper v1.4.0
+	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 )
 
 require (
+	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 )
 
 require (
