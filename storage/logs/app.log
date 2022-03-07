@@ -1,1 +1,3 @@
 2022/02/04 18:21:44 {"callers":["D:/Study/GoLang/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1643970104099305700}
+2022/03/08 00:47:38 {"callers":["D:/Study/GoLang/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646671658235854200}
+2022/03/08 01:00:40 {"callers":["D:/Study/GoLang/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646672440535033200}
