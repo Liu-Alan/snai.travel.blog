@@ -9,8 +9,11 @@ require (
 )
 
 require (
+	github.com/go-playground/locales v0.14.0 // indirect
+	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/leodido/go-urn v1.2.1 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
 )
 
@@ -44,9 +47,9 @@ require (
 	github.com/swaggo/swag v1.8.0 // indirect
 	github.com/ugorji/go v1.2.7 // indirect
 	github.com/urfave/cli v1.22.5 // indirect
-	golang.org/x/crypto v0.0.0-20220307211146-efcb8507fb70 // indirect
+	golang.org/x/crypto v0.0.0-20220315160706-3147a52a75dd // indirect
 	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
-	golang.org/x/sys v0.0.0-20220307203707-22a9840ba4d7 // indirect
+	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	golang.org/x/tools v0.1.9 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
