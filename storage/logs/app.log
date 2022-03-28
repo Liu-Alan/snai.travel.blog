@@ -2,3 +2,6 @@
 2022/03/08 00:47:38 {"callers":["D:/Study/GoLang/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646671658235854200}
 2022/03/08 01:00:40 {"callers":["D:/Study/GoLang/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646672440535033200}
 2022/03/08 18:53:13 {"callers":["D:/MyData/学习资料/Go/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1646736793968842300}
+2022/03/28 21:18:41 {"callers":["D:/MyData/学习资料/Go/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1648473521966515800}
+2022/03/28 21:22:30 {"callers":["D:/MyData/学习资料/Go/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1648473750488234400}
+2022/03/28 21:23:48 {"callers":["D:/MyData/学习资料/Go/Works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"error","message":"app.BindAndValid errs:State必须是[0 1]中的一个","time":1648473828276053900}

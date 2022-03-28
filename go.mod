@@ -9,7 +9,7 @@ require (
 )
 
 require (
-	github.com/go-playground/locales v0.14.0 // indirect
+	github.com/go-playground/locales v0.14.0
 	github.com/go-playground/universal-translator v0.18.0
 	github.com/go-sql-driver/mysql v1.4.1 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect

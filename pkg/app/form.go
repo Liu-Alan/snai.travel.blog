@@ -28,7 +28,7 @@ func (v ValidErrors) Errors() []string {
 	return errs
 }
 
-func (v ValidErrors) Error() []string {
+func (v ValidErrors) Error() string {
 	return strings.Join(v.Errors(), ",")
 }
 
