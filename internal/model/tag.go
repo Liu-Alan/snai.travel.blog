@@ -39,3 +39,15 @@ func (t Tag) List(db *gorm.DB, pageOffset, pageSize int) ([]*Tag, error) {
 	}
 	return tags, nil
 }
+
+func (t Tag) Creata(db *gorm.DB) error {
+	return db.Creata(&t).Error
+}
+
+func (t Tag) Update(db *gorm.DB) error {
+	return db.Model(&Tag{}).Where("id = ? AND is_del=?", t.ID, 0).Update(t).Error
+}
+
+func (t Tag) Delete(db *gorm.DB) error {
+	return db.Where("id = ? AND is_del=?", t.Model.ID, 0).Delete(&t).Error
+}
