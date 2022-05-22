@@ -2,6 +2,7 @@ package model
 
 import (
 	"fmt"
+	"time"
 
 	"snai.travel.blog/global"
 
@@ -42,4 +43,21 @@ func NewDBEngine(databaseSetting *setting.DatabaseSettingS) (*gorm.DB, error) {
 	db.DB().SetMaxOpenConns(databaseSetting.MaxOpenConns)
 
 	return db, nil
+}
+
+func updateTimeStampForCreateCallback(scope *gorm.Scope) {
+	if !scope.HasError() {
+		nowTime := int32(time.Now().Unix())
+		if createTimeField, ok := scope.FieldByName("CreatedOn"); ok {
+			if createTimeField.IsBlank {
+				_ = createTimeField.Set(nowTime)
+			}
+		}
+
+		if modifyTimeField, ok := scope.FieldByName("ModifiedOn"); ok {
+			if modifyTimeField.IsBlank {
+				_ = modifyTimeField.Set(nowTime)
+			}
+		}
+	}
 }
