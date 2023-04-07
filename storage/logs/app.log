@@ -28,3 +28,5 @@
 2023/04/07 19:28:42 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1680866922888569600}
 2023/04/07 19:28:48 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"error","message":"svc.DeleteTag err: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1","time":1680866928956117100}
 2023/04/07 19:36:08 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1680867368309205800}
+2023/04/07 20:46:00 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1680871560600542800}
+2023/04/07 20:48:54 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1680871734438485600}
