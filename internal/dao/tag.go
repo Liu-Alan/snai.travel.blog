@@ -23,7 +23,7 @@ func (d *Dao) CreateTag(name string, state uint8, createdBy string) error {
 		Model: &model.Model{CreatedBy: createdBy},
 	}
 
-	return tag.Creata(d.engine)
+	return tag.Create(d.engine)
 }
 
 func (d *Dao) UpdateTag(id uint32, name string, state uint8, modifiedBy string) error {

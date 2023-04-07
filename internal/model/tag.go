@@ -40,8 +40,8 @@ func (t Tag) List(db *gorm.DB, pageOffset, pageSize int) ([]*Tag, error) {
 	return tags, nil
 }
 
-func (t Tag) Creata(db *gorm.DB) error {
-	return db.Creata(&t).Error
+func (t Tag) Create(db *gorm.DB) error {
+	return db.Create(&t).Error
 }
 
 func (t Tag) Update(db *gorm.DB) error {
@@ -49,5 +49,5 @@ func (t Tag) Update(db *gorm.DB) error {
 }
 
 func (t Tag) Delete(db *gorm.DB) error {
-	return db.Where("id = ? AND is_del=?", t.Model.ID, 0).Delete(&t).Error
+	return db.Where("id = ? AND is_del = ?", t.Model.ID, 0).Delete(&t).Error
 }
