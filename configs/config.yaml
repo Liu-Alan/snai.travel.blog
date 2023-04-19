@@ -28,6 +28,6 @@ Database:
   MaxIdleConns: 10
   MaxOpenConns: 30
 JWT:
-  Secret: eddycjy
-  Issuer: blog-service
+  Secret: snai
+  Issuer: snai-blog
   Expire: 7200

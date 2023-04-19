@@ -1,0 +1,5 @@
+2023/04/19 15:33:44 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681889624713704600}
+2023/04/19 15:38:23 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"error","message":"svc.CheckAuth err: Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AMD app_secret =? AND is_del=?) ORDER BY `blog_auth`.`id` ASC LIMIT 1' at line 1","time":1681889903181022500}
+2023/04/19 15:46:27 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681890387291528900}
+2023/04/19 16:00:35 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681891235056406400}
+2023/04/19 17:09:53 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681895393778863400}
