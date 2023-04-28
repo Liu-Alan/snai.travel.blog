@@ -3,3 +3,8 @@
 2023/04/19 15:46:27 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681890387291528900}
 2023/04/19 16:00:35 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681891235056406400}
 2023/04/19 17:09:53 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1681895393778863400}
+2023/04/28 11:55:57 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1682654157708395500}
+2023/04/28 11:56:56 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1682654216853594400}
+2023/04/28 12:01:05 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: go-programming-tour-book/blog-service","time":1682654465976114500}
+2023/04/28 12:06:27 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"eddycjy: snai-blog/snai","time":1682654787960074800}
+2023/04/28 12:08:56 {"callers":["D:/go/works/src/snai.travel.blog/main.go: 24 main.init.0"],"level":"info","message":"author: snai-blog/snai","time":1682654936463906800}

@@ -1,5 +1,5 @@
 Server:
-  RunMode: debug
+  RunMode: release #debug
   HttpPort: 8081
   ReadTimeout: 60
   WriteTimeout: 60
@@ -31,3 +31,12 @@ JWT:
   Secret: snai
   Issuer: snai-blog
   Expire: 7200
+Email:
+  Host: smtp.qq.com
+  Post: 465
+  UserName: xxx@qq.com
+  Password: zzz  #邮箱密码或授权码
+  IsSSL: true
+  From: xxx@qq.com
+  To:
+    - yyy@163.com

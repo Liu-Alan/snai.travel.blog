@@ -55,6 +55,11 @@ func setupSetting() error {
 		return err
 	}
 
+	err = setting.ReadSection("Email", &global.EmailSetting)
+	if err != nil {
+		return err
+	}
+
 	global.ServerSetting.ReadTimeout *= time.Second
 	global.ServerSetting.WriteTimeout *= time.Second
 	global.JWTSetting.Expire *= time.Second
@@ -85,10 +90,10 @@ func setupDBEngine() error {
 
 // @title 博客系统
 // @version 1.0
-// @description Go 语言编程之旅：一起用 Go 做项目
-// @termsOfService https://github.com/go-programming-tour-book
+// @description
+// @termsOfService
 func main() {
-	global.Logger.Infof("%s: go-programming-tour-book/%s", "eddycjy", "blog-service")
+	global.Logger.Infof("%s: snai-blog/%s", "author", "snai")
 	gin.SetMode(global.ServerSetting.RunMode)
 	router := routers.NewRouter()
 	//router.Run()
